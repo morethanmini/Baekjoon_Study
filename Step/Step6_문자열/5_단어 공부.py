@@ -1,9 +1,11 @@
-s = list(set(input().upper()))
+a = input().upper()
+b = list(range(ord("A"), ord("Z")+1))
 arr = []
 
-for i in s:
-    count = s.count
-    arr.append(count(i))
+for i in b:
+    arr.append(a.count(chr(i)))
 
-print(count)
-print(arr)
+if arr.count(max(arr)) > 1:
+    print("?")
+else:
+    print(chr(b[arr.index(max(arr))]))
